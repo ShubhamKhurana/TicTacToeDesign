@@ -1,4 +1,4 @@
-package TicTacToeModels;
+package TicTacToeCode.models;
 
 public enum BotDifficultyLevel {
     EASY,
