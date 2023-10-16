@@ -4,6 +4,10 @@ public class Move {
     Cell cell;
     Player player;
 
+    public Move(int row, int col){
+        this.cell = new Cell(row, col);
+    }
+
     public Cell getCell() {
         return cell;
     }

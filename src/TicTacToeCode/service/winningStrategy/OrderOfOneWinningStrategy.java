@@ -30,7 +30,6 @@ public class OrderOfOneWinningStrategy implements WinningStrategy{
             colHashMaps.add(new HashMap<>());
         }
     }
-
     public boolean isTopLeftDiagonalCell(int row, int col){
         return (row == col);
     }
@@ -46,7 +45,9 @@ public class OrderOfOneWinningStrategy implements WinningStrategy{
         return false;
     }
 
-    public boolean checkRowWin(int row, char symbol){
+    // Will we call these outside this class?
+    // No, so make this methods as private
+    private boolean checkRowWin(int row, char symbol){
         // if symbol does not exist, insert in map
         if(rowHashMaps.get(row).containsKey(symbol)){
             rowHashMaps.get(row).put(symbol, 0);
@@ -63,7 +64,7 @@ public class OrderOfOneWinningStrategy implements WinningStrategy{
         return false;
     }
 
-    public boolean checkColumnWin(int col, char symbol){
+    private boolean checkColumnWin(int col, char symbol){
         // if symbol does not exist, insert in map
         if(colHashMaps.get(col).containsKey(symbol)){
             colHashMaps.get(col).put(symbol, 0);
@@ -80,7 +81,7 @@ public class OrderOfOneWinningStrategy implements WinningStrategy{
         return false;
     }
 
-    public boolean checkTopLeftDiagonalWin(char symbol){
+    private boolean checkTopLeftDiagonalWin(char symbol){
         // if symbol does not exist, insert in map
         if(topLeftHashMap.containsKey(symbol)){
             topLeftHashMap.put(symbol, 0);
@@ -97,7 +98,7 @@ public class OrderOfOneWinningStrategy implements WinningStrategy{
         return false;
     }
 
-    public boolean checkTopRightDiagonalWin(char symbol){
+    private boolean checkTopRightDiagonalWin(char symbol){
         // if symbol does not exist, insert in map
         if(topRightHashMap.containsKey(symbol)){
             topRightHashMap.put(symbol, 0);
@@ -114,7 +115,7 @@ public class OrderOfOneWinningStrategy implements WinningStrategy{
         return false;
     }
 
-    public boolean checkCornerWin(char symbol){
+    private boolean checkCornerWin(char symbol){
         // if symbol does not exist, insert in map
         if(cornerHashMap.containsKey(symbol)){
             cornerHashMap.put(symbol, 0);
