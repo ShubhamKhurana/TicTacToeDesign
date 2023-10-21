@@ -17,7 +17,7 @@ public class Cell {
             System.out.print("| |");
         }
         else{
-            System.out.print("| " + player.getSymbol() + " |");
+            System.out.print("|" + player.getSymbol() + "|");
         }
     }
 

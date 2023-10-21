@@ -19,15 +19,19 @@ public class Board {
         }
     }
 
+    // Copy constructor
+    public Board(Board board){
+        this.size = board.size;
+        this.board = board.board;
+    }
+
     public void printBoard(){
         for(int i=0;i<size;i++){
-            for(int j=0;j<size;j++){
-                List<Cell> cells = board.get(i);
-                for(Cell cell : cells){
-                    cell.display();
-                }
-                System.out.println();
+            List<Cell> cells = board.get(i);
+            for(Cell cell : cells){
+                cell.display();
             }
+            System.out.println();
         }
     }
 
