@@ -86,7 +86,7 @@ public class GameController {
     private void updateBoardStates(Game game){
         // copy constructor is required
         // else same reference se it will only have the last state of game at all values
-        Board currentBoard = game.getCurrentBoard();
+        Board currentBoard = new Board(game.getCurrentBoard());
         game.getBoardStates().add(currentBoard);
     }
 

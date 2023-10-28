@@ -21,6 +21,13 @@ public class Player {
         this.playerType = playerType;
     }
 
+    public Player(Player player) {
+        this.id = player.id;
+        this.name = player.name;
+        this.symbol = player.symbol;
+        this.playerType = player.playerType;
+    }
+
     public Move makeMove(Board board) throws GameOverException {
         Scanner sc = new Scanner(System.in);
         System.out.println(this.name + "'s Turn (" + this.getPlayerType() + ")");

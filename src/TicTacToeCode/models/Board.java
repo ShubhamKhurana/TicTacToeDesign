@@ -20,9 +20,18 @@ public class Board {
     }
 
     // Copy constructor
+    // Will fix the same reference problem we're facing in "Replay Game" functionality
     public Board(Board board){
         this.size = board.size;
-        this.board = board.board;
+        this.board = new ArrayList<>();
+
+        for(int i=0;i<size;i++){
+            this.board.add(new ArrayList<>());
+            for(int j=0;j<size;j++){
+                Cell cellCopy = board.board.get(i).get(j);
+                this.board.get(i).add(new Cell(cellCopy));
+            }
+        }
     }
 
     public void printBoard(){

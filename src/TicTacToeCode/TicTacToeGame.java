@@ -78,7 +78,7 @@ public class TicTacToeGame {
 
             Move movePlayed = gameController.executeMove(game, players.get(playerIndex));
 
-            // TODO: Implement Undo functionaliy
+            // TODO: Implement Undo functionality
             System.out.println("Do you want to undo your last move? Y/N");
             String isUndoRequired = sc.next();
 
